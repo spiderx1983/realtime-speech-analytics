@@ -2,8 +2,12 @@
   "name": "node-speach-sentiment",
   "version": "0.0.1",
   "scripts": {
+    "preinstall": "npm install --package-lock-only --ignore-scripts && npx force-resolutions",
     "start": "node ./bin/www",
     "build": "gulp build && bower install"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   },
   "dependencies": {
     "body-parser": "~1.12.4",
